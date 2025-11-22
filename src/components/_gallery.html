@@ -1,0 +1,77 @@
+<div class="gallery">
+    <div class="gallery-title">Фотографии</div>
+    <div class="gallery-carousel">
+        <button class="carousel-btn carousel-btn-prev" aria-label="">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        
+        <div class="gallery-slides">
+            <div class="slide active">
+                <img class="gallery-img" src="../assets/images/gallery1.webp" alt="">
+            </div>
+            <div class="slide">
+                <img class="gallery-img" src="../assets/images/gallery2.webp" alt="">
+            </div>
+            <div class="slide">
+                <img class="gallery-img" src="../assets/images/gallery3.webp" alt="">
+            </div>
+        </div>
+        
+        <button class="carousel-btn carousel-btn-next" aria-label="">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+    </div>
+    
+    <div class="carousel-dots">
+        <button class="dot active" aria-label=""></button>
+        <button class="dot" aria-label=""></button>
+        <button class="dot" aria-label=""></button>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    const prevBtn = document.querySelector('.carousel-btn-prev');
+    const nextBtn = document.querySelector('.carousel-btn-next');
+    let currentSlide = 0;
+
+    function showSlide(n) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+        
+        if (n >= slides.length) currentSlide = 0;
+        if (n < 0) currentSlide = slides.length - 1;
+        
+        slides[currentSlide].classList.add('active');
+        dots[currentSlide].classList.add('active');
+    }
+
+    function nextSlide() {
+        currentSlide++;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide--;
+        showSlide(currentSlide);
+    }
+
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
+
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            currentSlide = index;
+            showSlide(currentSlide);
+        });
+    });
+
+    SetInterval(nextSlide, 8000);
+});
+</script>

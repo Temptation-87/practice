@@ -1,0 +1,29 @@
+.cta-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2C1F17;
+    color: #fff;
+    font-family: 'Roboto';
+    font-size: 24px;
+    text-decoration: none;
+    border-radius: 8px;
+    width: 19rem;
+    height: 6.25rem;
+    transition: background-color 0.1s ease, transform 0.1s ease;
+}
+
+.cta-button:hover {
+    background-color: #3a2a20;
+    transform: translateY(-2px);
+}
+
+.cta-button:active {
+    background-color: #1f1410;
+    transform: translateY(1px);
+}
+
+.cta-button:focus {
+    outline: 3px solid #d8c7b1; 
+    outline-offset: 1px;
+}

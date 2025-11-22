@@ -1,0 +1,18 @@
+.history {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 40px;
+    gap: 50px;
+}
+
+.history-title {
+    font-family: 'Montserrat';
+    font-size: 2rem;
+    text-align: center;
+}
+
+.history-txt {
+    font-family: 'Roboto';
+    font-size: 24px;
+}
+

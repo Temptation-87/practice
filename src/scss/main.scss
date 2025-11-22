@@ -1,0 +1,26 @@
+@use 'base/typography';
+@use 'components/header';
+@use 'components/footer';
+@use 'components/collection';
+@use 'components/cta-btn.scss';
+@use 'components/hero.scss';
+@use 'components/cta-block.scss';
+@use 'components/rates.scss';
+@use 'components/contacts-nav.scss';
+@use 'components/contacts-info.scss';
+@use 'components/contacts-form.scss';
+@use 'components/excursions-nav.scss';
+@use 'components/excursions-cards.scss';
+@use 'components/excursions-faq.scss';
+@use 'components/about-nav.scss';
+@use 'components/history.scss';
+@use 'components/mission.scss';
+@use 'components/principles.scss';
+@use 'components/gallery.scss';
+@use 'components/team.scss';
+@use 'components/dark-theme.scss';
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #FFFFE0;
+}

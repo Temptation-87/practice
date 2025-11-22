@@ -1,0 +1,85 @@
+<header>
+    <img class="logo" src="../assets/images/logo.webp" alt="">
+    <div class="navigation">
+        <a class="a1" href="index.html">Главная</a>
+        <a class="a2" href="excursions.html">Экскурсии</a>
+        <a class="a3" href="about.html">О нас</a>
+        <a class="a4" href="contacts.html">Контакты</a>
+    </div>
+    
+    <div class="header-controls">
+        <button class="theme">
+            <img class="theme-icon" src="../assets/images/theme.webp" alt="">
+        </button>
+        
+        <button class="burger-menu" aria-label="Открыть меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+
+    <div class="mobile-modal" id="mobileModal">
+        <div class="mobile-modal-content">
+            <button class="close-modal" aria-label="Закрыть меню">&times;</button>
+
+            <nav class="mobile-nav">
+                <a href="index.html">Главная</a>
+                <a href="excursions.html">Экскурсии</a>
+                <a href="about.html">О нас</a>
+                <a href="contacts.html">Контакты</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<script>
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const burger = document.querySelector('.burger-menu');
+    const modal = document.getElementById('mobileModal');
+    const closeBtn = document.querySelector('.close-modal');
+    const links = document.querySelectorAll('.mobile-nav a');
+
+    burger.addEventListener('click', () => {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+
+    closeBtn.addEventListener('click', () => {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+});
+const themeBtn = document.querySelector('.theme');
+
+themeBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-theme');
+
+    if (document.body.classList.contains('dark-theme')) {
+        localStorage.setItem('theme', 'dark');
+    } else {
+        localStorage.setItem('theme', 'light');
+    }
+});
+
+if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-theme');
+}
+
+</script>

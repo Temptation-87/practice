@@ -1,0 +1,18 @@
+.mission {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 40px;
+    gap: 50px;
+}
+
+.mission-title {
+    font-family: 'Montserrat';
+    font-size: 2rem;
+    text-align: center;
+}
+
+.mission-txt {
+    font-family: 'Roboto';
+    font-size: 24px;
+}
+

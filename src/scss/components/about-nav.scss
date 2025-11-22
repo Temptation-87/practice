@@ -1,0 +1,14 @@
+.about-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5625rem;
+    padding: 50px 0;
+}
+
+.about-nav-a1, .about-nav-a2 {
+    font-family: 'Roboto';
+    font-size: 2rem;
+    text-decoration: none;
+    color: black;
+}

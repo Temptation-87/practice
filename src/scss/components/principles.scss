@@ -1,0 +1,17 @@
+.principles {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 40px;
+    gap: 50px;
+}
+
+.principles-title {
+    font-family: 'Montserrat';
+    font-size: 2rem;
+    text-align: center;
+}
+
+.principles-txt {
+    font-family: 'Roboto';
+    font-size: 24px;
+}

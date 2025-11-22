@@ -1,0 +1,107 @@
+.contacts-info {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    padding: 6.25rem 2.5rem;
+}
+
+.contacts-info-title {
+    font-family: 'Montserrat';
+    font-size: 2rem;
+    text-align: center;
+}
+
+.contacts-info-block {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    align-items: center;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 2.5% 0;
+}
+
+.contact1, .contact2, .contact3, .contact4 {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.contacts1-txt, .contacts2-txt, .contacts3-txt, .contacts4-txt {
+    font-family: 'Roboto';
+    font-size: 24px;
+}
+
+.map {
+    border-radius: 15px;
+}
+
+
+
+@media (max-width: 1279px) {
+    .contacts-info {
+        gap: 80px;
+        padding: 5rem 2rem;
+    }
+    
+    .contacts-info-block {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .contacts {
+        gap: 40px;
+        padding: 0;
+        width: 100%;
+        max-width: 600px;
+    }
+    
+    .contacts-info-title {
+        font-size: 1.8rem;
+    }
+    
+    .contacts1-txt, .contacts2-txt, .contacts3-txt, .contacts4-txt {
+        font-size: 22px;
+    }
+    
+    .contacts-house-icon, .contacts-phone-icon, .contacts-mail-icon, .contacts-clock-icon {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+@media (max-width: 767px) {
+    .contacts-info {
+        gap: 60px;
+        padding: 3rem 1rem;
+    }
+    
+    .contacts-info-block {
+        gap: 30px;
+    }
+    
+    .contacts {
+        gap: 30px;
+    }
+    
+    .contacts-info-title {
+        font-size: 1.6rem;
+    }
+    
+    .contacts1-txt, .contacts2-txt, .contacts3-txt, .contacts4-txt {
+        font-size: 18px;
+    }
+    
+    .contact1, .contact2, .contact3, .contact4 {
+        gap: 8px;
+    }
+    
+    .contacts-house-icon, .contacts-phone-icon, .contacts-mail-icon, .contacts-clock-icon {
+        width: 24px;
+        height: 24px;
+    }
+}

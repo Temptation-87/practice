@@ -1,0 +1,92 @@
+.dark-theme {
+    background-color: #1a1a1a;
+    color: #f2f2f2;
+}
+
+.dark-theme header {
+    background-color: #222;
+}
+
+.dark-theme .navigation,
+.dark-theme .mobile-modal-content {
+    background-color: #222;
+}
+
+
+.dark-theme a {
+    color: #f2f2f2;
+}
+
+.dark-theme a:hover {
+    color: #bbb;
+}
+
+.dark-theme .theme-icon {
+    filter: invert(1);
+}
+
+.dark-theme .burger-menu span {
+    background-color: #f2f2f2;
+}
+
+.dark-theme .collection {
+    background-color: #1e1e1e;
+}
+
+.dark-theme .collection-name {
+    color: #f2f2f2;
+}
+
+.dark-theme .collection-card1,
+.dark-theme .collection-card2,
+.dark-theme .collection-card3 {
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.6);
+}
+
+.dark-theme .album-title1,
+.dark-theme .album-title2,
+.dark-theme .album-title3 {
+    color: #fff;
+}
+
+.dark-theme .album-description1,
+.dark-theme .album-description2,
+.dark-theme .album-description3 {
+    color: #ddd;
+}
+
+.dark-theme .collection-btn button,
+.dark-theme .collection-btn a {
+    color: #fff !important;
+}
+
+.dark-theme .rates {
+    background-color: #161616;
+}
+
+.dark-theme .rates-title {
+    color: #f2f2f2;
+}
+
+.dark-theme .rates-card1,
+.dark-theme .rates-card2,
+.dark-theme .rates-card3,
+.dark-theme .rates-card4 {
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.6);
+}
+
+.dark-theme .card-rate-name1,
+.dark-theme .card-rate-name2,
+.dark-theme .card-rate-name3,
+.dark-theme .card-rate-name4 {
+    color: #fff;
+}
+
+.dark-theme .rates-text-card1,
+.dark-theme .rates-text-card2,
+.dark-theme .rates-text-card3,
+.dark-theme .rates-text-card4 {
+    color: #ddd;
+}

@@ -1,0 +1,117 @@
+.collection {
+    background-color: #F5EEC8;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.9375rem;
+}
+
+.collection-name {
+    padding: 50px 0;
+    font-family: 'Montserrat';
+    font-size: 2rem;
+    text-align: center;
+}
+
+.collection-cards {
+    display: flex;
+    gap: auto;
+    justify-content: space-around;
+}
+
+.album-description1, .album-description2, .album-description3 {
+    width: 28.5rem;
+}
+
+.collection-card1, .collection-card2, .collection-card3 {
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    padding: 3.125rem 1.5625rem;
+    align-items: center;
+    gap: 1.5625rem;
+    border-radius: 0.9375rem;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.album-title1, .album-title2, .album-title3 {
+    font-family: 'Montserrat';
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.album-description1, .album-description2, .album-description3 {
+    font-family: 'Roboto';
+    font-size: 1.5rem;
+}
+
+.collection-btn {
+    display: flex;
+    justify-content: center;
+    padding: 3.125rem 0;
+}
+
+@media (max-width: 1279px) {
+    .collection-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    
+    .collection-card1, .collection-card2, .collection-card3 {
+        width: 80%;
+        max-width: 35rem;
+        padding: 2.5rem 1.25rem;
+    }
+    
+    .album-description1, .album-description2, .album-description3 {
+        width: 100%;
+        max-width: none;
+    }
+    
+    .album-title1, .album-title2, .album-title3 {
+        font-size: 1.4rem;
+    }
+    
+    .album-description1, .album-description2, .album-description3 {
+        font-size: 1.3rem;
+    }
+    
+    .collection-name {
+        padding: 40px 0;
+        font-size: 1.8rem;
+    }
+    
+    .collection-btn {
+        padding: 2.5rem 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .collection-card1, .collection-card2, .collection-card3 {
+        width: 90%;
+        padding: 2rem 1rem;
+        gap: 1.25rem;
+    }
+    
+    .album-title1, .album-title2, .album-title3 {
+        font-size: 1.2rem;
+    }
+    
+    .album-description1, .album-description2, .album-description3 {
+        font-size: 1.1rem;
+    }
+    
+    .collection-name {
+        padding: 30px 0;
+        font-size: 1.6rem;
+    }
+    
+    .collection-btn {
+        padding: 2rem 0;
+    }
+    
+    .collection-cards {
+        gap: 1.5rem;
+    }
+}

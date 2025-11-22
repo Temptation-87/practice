@@ -1,0 +1,151 @@
+footer {
+    background-color: #2C1F17;
+    display: flex;
+    flex-direction: column;
+    gap: 6.25rem;
+    padding: 3.125rem 2.5rem;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.footer-rights {
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Montserrat';
+}
+
+.footer-navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 3.125rem;
+}
+
+.footer-navigation-name, .footer-contacts-name, .footer-social-name {
+    text-align: center;
+    font-weight: bold;
+}
+
+.footer-a1, .footer-a2, .footer-a3, .footer-a4, .footer-navigation-name, .contact1-txt, .contact2-txt, .contact3-txt, .contact4-txt, .footer-contacts-name, .inst-txt, .tg-txt, .vk-txt, .footer-social-name {
+    font-family: 'Montserrat';
+    text-decoration: none;
+    font-size: 24px;
+    color: white;
+    align-items: center;
+}
+
+.footer-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 3.125rem;
+}
+
+.footer-contact1, .footer-contact2, .footer-contact3, .footer-contact4 {
+    display: flex;
+    align-items: center;
+    gap: 0.9375rem;
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    gap: 3.125rem;
+}
+
+.footer-inst, .footer-tg, .footer-vk {
+    display: flex;
+    gap: 0.9375rem;
+    align-items: center;
+}
+
+.footer-rights {
+    color: white;
+    opacity: 0.5;
+    font-size: 24px;
+}
+
+.house-icon, .phone-icon, .mail-icon, .clock-icon, .inst, .tg, .vk {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+
+@media (max-width: 1279px) {
+    footer {
+        gap: 4rem;
+        padding: 2.5rem 1.5rem;
+    }
+    
+    .footer-nav {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 3rem;
+    }
+    
+    .footer-navigation, .footer-contacts, .footer-social {
+        gap: 2rem;
+        flex: 1;
+        min-width: 250px;
+    }
+    
+    .footer-a1, .footer-a2, .footer-a3, .footer-a4, 
+    .footer-navigation-name, .contact1-txt, .contact2-txt, 
+    .contact3-txt, .contact4-txt, .footer-contacts-name, 
+    .inst-txt, .tg-txt, .vk-txt, .footer-social-name,
+    .footer-rights {
+        font-size: 20px;
+    }
+    
+    .footer-contact1, .footer-contact2, .footer-contact3, .footer-contact4,
+    .footer-inst, .footer-tg, .footer-vk {
+        gap: 0.75rem;
+    }
+}
+
+@media (max-width: 767px) {
+    footer {
+        gap: 3rem;
+        padding: 2rem 1rem;
+    }
+    
+    .footer-nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    .footer-navigation, .footer-contacts, .footer-social {
+        gap: 1.5rem;
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
+    
+    .footer-a1, .footer-a2, .footer-a3, .footer-a4, 
+    .footer-navigation-name, .contact1-txt, .contact2-txt, 
+    .contact3-txt, .contact4-txt, .footer-contacts-name, 
+    .inst-txt, .tg-txt, .vk-txt, .footer-social-name,
+    .footer-rights {
+        font-size: 18px;
+    }
+    
+    .footer-contact1, .footer-contact2, .footer-contact3, .footer-contact4,
+    .footer-inst, .footer-tg, .footer-vk {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+    
+    .footer-rights {
+        font-size: 16px;
+    }
+    
+    .house-icon, .phone-icon, .mail-icon, .clock-icon, .inst, .tg, .vk {
+        width: 28px;
+        height: 28px;
+    }
+}

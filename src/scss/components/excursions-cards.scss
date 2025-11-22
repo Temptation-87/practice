@@ -1,0 +1,148 @@
+.excursions-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    padding: 50px 40px;
+}
+
+.excursions-cards-title {
+    font-family: 'Montserrat';
+    font-size: 2rem;
+    text-align: center;
+}
+
+.excursions-cards-row {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+
+.excursions-card1, .excursions-card2, .excursions-card3 {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 25px 25px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.excursions-card1-title-duration, .excursions-card2-title-duration, .excursions-card3-title-duration {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.excursions-card1-title, .excursions-card2-title, .excursions-card3-title {
+    font-family: 'Roboto';
+    font-size: 2rem;
+    text-align: center;
+}
+
+.excursions-card1-duration, .excursions-card2-duration, .excursions-card3-duration {
+    font-family: 'Roboto';
+    font-size: 24px;
+    opacity: 0.8;
+    text-align: center;
+}
+
+.excursions-card1-info, .excursions-card2-info, .excursions-card3-info {
+    height: 300px;
+    font-family: 'Roboto';
+    font-size: 28px;
+    width: 389px;
+}
+
+.excursions-card1-cost, .excursions-card2-cost, .excursions-card3-cost {
+    font-family: 'Roboto';
+    font-size: 32px;
+    text-align: center;
+}
+
+.excursions-card1-btn, .excursions-card2-btn, .excursions-card3-btn {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 1279px) {
+    .excursions-cards {
+        gap: 80px;
+        padding: 40px 30px;
+    }
+    
+    .excursions-cards-row {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+    
+    .excursions-card1, .excursions-card2, .excursions-card3 {
+        width: 100%;
+        max-width: 500px;
+        gap: 40px;
+        padding: 30px 20px;
+    }
+    
+    .excursions-card1-info, .excursions-card2-info, .excursions-card3-info {
+        width: 100%;
+        height: auto;
+        min-height: 200px;
+        font-size: 24px;
+    }
+    
+    .excursions-cards-title {
+        font-size: 1.8rem;
+    }
+    
+    .excursions-card1-title, .excursions-card2-title, .excursions-card3-title {
+        font-size: 1.8rem;
+    }
+    
+    .excursions-card1-duration, .excursions-card2-duration, .excursions-card3-duration {
+        font-size: 22px;
+    }
+    
+    .excursions-card1-cost, .excursions-card2-cost, .excursions-card3-cost {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 767px) {
+    .excursions-cards {
+        gap: 60px;
+        padding: 30px 20px;
+    }
+    
+    .excursions-cards-row {
+        gap: 30px;
+    }
+    
+    .excursions-card1, .excursions-card2, .excursions-card3 {
+        gap: 30px;
+        padding: 25px 15px;
+    }
+    
+    .excursions-card1-info, .excursions-card2-info, .excursions-card3-info {
+        min-height: 150px;
+        font-size: 20px;
+    }
+    
+    .excursions-cards-title {
+        font-size: 1.6rem;
+    }
+    
+    .excursions-card1-title, .excursions-card2-title, .excursions-card3-title {
+        font-size: 1.6rem;
+    }
+    
+    .excursions-card1-duration, .excursions-card2-duration, .excursions-card3-duration {
+        font-size: 20px;
+    }
+    
+    .excursions-card1-cost, .excursions-card2-cost, .excursions-card3-cost {
+        font-size: 24px;
+    }
+    
+    .excursions-card1-title-duration, .excursions-card2-title-duration, .excursions-card3-title-duration {
+        gap: 15px;
+    }
+}
