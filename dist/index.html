@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+    <img class="logo" src="../assets/images/logo.webp" alt="">
+    <div class="navigation">
+        <a class="a1" href="index.html">Главная</a>
+        <a class="a2" href="excursions.html">Экскурсии</a>
+        <a class="a3" href="about.html">О нас</a>
+        <a class="a4" href="contacts.html">Контакты</a>
+    </div>
+    
+    <div class="header-controls">
+        <button class="theme">
+            <img class="theme-icon" src="../assets/images/theme.webp" alt="">
+        </button>
+        
+        <button class="burger-menu" aria-label="Открыть меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+
+    <div class="mobile-modal" id="mobileModal">
+        <div class="mobile-modal-content">
+            <button class="close-modal" aria-label="Закрыть меню">&times;</button>
+
+            <nav class="mobile-nav">
+                <a href="index.html">Главная</a>
+                <a href="excursions.html">Экскурсии</a>
+                <a href="about.html">О нас</a>
+                <a href="contacts.html">Контакты</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<script>
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const burger = document.querySelector('.burger-menu');
+    const modal = document.getElementById('mobileModal');
+    const closeBtn = document.querySelector('.close-modal');
+    const links = document.querySelectorAll('.mobile-nav a');
+
+    burger.addEventListener('click', () => {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+
+    closeBtn.addEventListener('click', () => {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+});
+const themeBtn = document.querySelector('.theme');
+
+themeBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-theme');
+
+    if (document.body.classList.contains('dark-theme')) {
+        localStorage.setItem('theme', 'dark');
+    } else {
+        localStorage.setItem('theme', 'light');
+    }
+});
+
+if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-theme');
+}
+
+</script>
+    <div class="hero">
+    <div class="hero-title">Добро пожаловать в Винилариум – Музей редких винилов.</div>
+    <div class="hero-texts">
+        <div class="hero-text1">Здесь собраны уникальные экземпляры пластинок – ошибочные тиражи, коллекционные издания и записи, дошедшие до наших дней в единственном числе.</div>
+        <div class="hero-text2">Каждая пластинка – история, которую невозможно повторить.</div>
+    </div>
+    
+</div>
+    <div class="collection">
+    <div class="collection-name">Из нашей коллекции</div>
+    <div class="collection-cards">
+        <div class="collection-card1">
+            <img class="album-cover1" src="../assets/images/cover11.webp" alt="">
+            <div class="album-title1">The Beatles - Yesterday and Today (1966)</div>
+            <div class="album-description1">Почему редкий: Первая партия обложек была напечатана с провокационным фото, где участники группы позируют в халатах с кукольными частями и мясом.После скандала тираж срочно изъяли и заменили.</div>
+        </div>
+        <div class="collection-card2">
+            <img class="album-cover2" src="../assets/images/cover22.webp" alt="">
+            <div class="album-title2">Joy Division - Unknown Pleasures (1979)</div>
+            <div class="album-description2">Почему редкий: Первый выпуск пластинки имел уникальную текстурированную обложку — позже её заменили гладкой из-за стоимости производства.</div>
+        </div>
+        <div class="collection-card3">
+            <img class="album-cover3" src="../assets/images/cover33.webp" alt="">
+            <div class="album-title2">Led Zeppelin - Led Zeppelin I (1969)</div>
+            <div class="album-description2">Почему редкий: Самая первая версия альбома выходила с бирюзовым текстом на обложке.Через пару недель типографию заменили, и текст стал коричневым.</div>
+        </div>
+    </div>
+    <div class="collection-btn">
+        <a href="excursions.html" class="cta-button">Записаться</a>
+
+    </div>
+</div>
+    <div class="rates">
+    <div class="rates-title">Что говорят наши посетители</div>
+    <div class="cards">
+        <div class="rates-card1">
+            <div class="card-rate1">
+                <div class="card-rate-name1">Артём Ковалёв</div>
+                <img class="card-rate-rating5" src="../assets/images/5starss.webp" alt="">
+            </div>
+            <div class="rates-text-card1">«Не ожидал увидеть столько действительно редких пластинок в одном месте. Некоторые экземпляры я знал только по статьям в журналах. Экскурсовод рассказывал так, будто сам был на тех студиях звукозаписи в 60-х. Вернусь ещё.»</div>
+        </div>
+
+        <div class="rates-card2">
+            <div class="card-rate2">
+                <div class="card-rate-name2">Марина Громова</div>
+                <img class="card-rate-rating5" src="../assets/images/5starss.webp" alt="">
+            </div>
+            <div class="rates-text-card2">«Всегда думала, что винил — это просто мода. Но после экскурсии поняла, что каждая пластинка — это кусок истории. Особенно впечатлили ограниченные тиражи. Атмосфера шикарная.»</div>
+        </div>
+        
+        <div class="rates-card3">
+            <div class="card-rate3">
+                <div class="card-rate-name3">Елена Матвеева</div>
+                <img class="card-rate-rating5" src="../assets/images/5starss.webp" alt="">
+            </div>
+            <div class="rates-text-card3">«Пришли без особых ожиданий, а получили одно из лучших впечатлений за год. Особенно понравилось, что можно было увидеть разные версии одного альбома и понять, чем они отличаются. Рекомендуем всем.»</div>
+        </div>
+
+        <div class="rates-card4">
+            <div class="card-rate4">
+                <div class="card-rate-name4">Данил Руденко</div>
+                <img class="card-rate-rating45" src="../assets/images/45stars.webp" alt="">
+            </div>
+            <div class="rates-text-card4">«Отличная коллекция редкого винила. Некоторые пластинки прослушивал только в цифровом виде — увидеть оригиналы было круто. Единственное, хотелось бы чуть больше информации о мастеринг-инженерах, но в целом музей топ.»</div>
+        </div>
+    </div>
+</div>
+    <div class="cta-block">
+    <div class="cta-block-titles">
+        <div class="cta-block-t1">
+            Хотите увидеть всё своими глазами?
+        </div>
+        <div class="cta-block-t2">
+            Запишитесь на экскурсию и исследуйте коллекцию редчайшего винила.
+        </div>
+        <div class="collection-btn">
+            <a href="excursions.html" class="cta-button">Записаться</a>
+
+        </div>
+    </div>
+</div>
+    <footer>
+    <div class="footer-nav">
+        
+        <div class="footer-navigation">
+            <div class="footer-navigation-name">Навигация</div>
+            <a class="footer-a1" href="index.html">Главная</a>
+            <a class="footer-a2" href="excursions.html">Экскурсии</a>
+            <a class="footer-a3" href="about.html">О нас</a>
+            <a class="footer-a4" href="contacts.html">Контакты</a>
+        </div>
+        <div class="footer-contacts">
+            <div class="footer-contacts-name">Контакты</div>
+            <div class="footer-contact1">
+                <img class="house-icon" src="../assets/images/house.webp" alt="">
+                <div class="contact1-txt">Адрес: г. Москва, ул. Кузнецова, 3А</div>
+            </div>
+            <div class="footer-contact2">
+                <img class="phone-icon" src="../assets/images/phone-icon.webp" alt="">
+                <div class="contact2-txt">Телефон: +7 (900) 123-45-67</div>
+            </div>
+            <div class="footer-contact3">
+                <img class="mail-icon" src="../assets/images/mail.webp" alt="">
+                <div class="contact3-txt">Почта: vinylarium.museum@yandex.ru</div>
+            </div>
+            <div class="footer-contact4">
+                <img class="clock-icon" src="../assets/images/clock.webp" alt="">
+                <div class="contact4-txt">График работы: пн-сб с 10:00 до 20:00</div>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <div class="footer-social-name">Наши соцсети</div>
+            <div class="footer-inst">
+                <img class="inst" src="../assets/images/inst.webp" alt="">
+                <div class="inst-txt">vinylarium.museum</div>
+            </div>
+            <div class="footer-tg">
+                <img class="tg" src="../assets/images/tg.webp" alt="">
+                <div class="tg-txt">vinylarium_channel</div>
+            </div>
+            <div class="footer-vk">
+                <img class="vk" src="../assets/images/vk.webp" alt="">
+                <div class="vk-txt">vinylarum_club</div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-rights">© Винилариум, 2025. Все права защищены.</div>
+</footer>
+    
+</body>
+</html>

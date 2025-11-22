@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+    <img class="logo" src="../assets/images/logo.webp" alt="">
+    <div class="navigation">
+        <a class="a1" href="index.html">Главная</a>
+        <a class="a2" href="excursions.html">Экскурсии</a>
+        <a class="a3" href="about.html">О нас</a>
+        <a class="a4" href="contacts.html">Контакты</a>
+    </div>
+    
+    <div class="header-controls">
+        <button class="theme">
+            <img class="theme-icon" src="../assets/images/theme.webp" alt="">
+        </button>
+        
+        <button class="burger-menu" aria-label="Открыть меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+
+    <div class="mobile-modal" id="mobileModal">
+        <div class="mobile-modal-content">
+            <button class="close-modal" aria-label="Закрыть меню">&times;</button>
+
+            <nav class="mobile-nav">
+                <a href="index.html">Главная</a>
+                <a href="excursions.html">Экскурсии</a>
+                <a href="about.html">О нас</a>
+                <a href="contacts.html">Контакты</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<script>
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const burger = document.querySelector('.burger-menu');
+    const modal = document.getElementById('mobileModal');
+    const closeBtn = document.querySelector('.close-modal');
+    const links = document.querySelectorAll('.mobile-nav a');
+
+    burger.addEventListener('click', () => {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+
+    closeBtn.addEventListener('click', () => {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+});
+const themeBtn = document.querySelector('.theme');
+
+themeBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-theme');
+
+    if (document.body.classList.contains('dark-theme')) {
+        localStorage.setItem('theme', 'dark');
+    } else {
+        localStorage.setItem('theme', 'light');
+    }
+});
+
+if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-theme');
+}
+
+</script>
+    <div class="about-nav">
+    <a class="about-nav-a1" href="index.html">Главная</a>
+    <img src="../assets/images/arrow.webp" alt="">
+    <div class="about-nav-a2">О нас</div>
+</div>
+    <div class="history">
+    <div class="history-title">Наша история</div>
+    <div class="history-txt">
+        Всё началось с маленькой, пыльной коробки на чердаке, доставшейся нам в наследство от старого меломана. Среди обычных пластинок мы нашли одну необычную — с перевёрнутой этикеткой. Эта находка заставила нас взглянуть на винил по-другому. Мы увидели в нём не просто носитель, а уникальный объект, чья ценность заключается в его истории, редкости и даже в его «несовершенствах». <br><br>
+
+        С того дня наша частная коллекция начала расти. Мы искали, обменивались, находили на блошиных рынках и аукционах по-настоящему особенные экземпляры: пластинки с опечатками в названиях, ограниченные тиражи, промо-релизы, издания с альтернативными обложками. В 2023 году наша страсть переросла в проект, и двери «Винилариума» открылись для всех ценителей аналогового звука и музыкальных раритетов.
+    </div>
+</div>
+    <div class="mission">
+    <div class="mission-title">Наша миссия</div>
+    <div class="mission-txt">
+        Мы выступаем в роли хранителей материального наследия музыкальной индустрии. Наша задача — сберечь эти хрупкие артефакты от забвения, обеспечив им правильные условия и дав им вторую жизнь. <br><br>
+        
+        Мы хотим показать новому поколению магию аналогового звука и тактильного опыта общения с музыкой. Через наши экспонаты мы рассказываем истории о музыкантах, звукоинженерах и дизайнерах, чьи работы навсегда изменили мир. <br><br>
+
+        «Винилариум» — это место встречи для коллекционеров, меломанов и всех любопытствующих. Мы создаём сообщество, где можно делиться находками, спорить о звуке и вместе погружаться в уникальную атмосферу виниловой культуры. <br><br>
+    </div>
+</div>
+    <div class="team">
+    <div class="team-title">Наша команда</div>
+    <div class="team-cards">
+        <div class="team-card1">
+            <img class="team-card-img1" src="../assets/images/team1.webp" alt="">
+            <div class="team-fullinfo1">
+                <div class="team-name-post1">
+                    <div class="team-name1">Демид Лебедев</div>
+                    <div class="team-post1">Основатель и главный хранитель</div>
+                </div>
+                <div class="team-info1">
+                    Идеолог «Винилариума». Обладает энциклопедическими знаниями в области истории звукозаписи и неиссякаемым энтузиазмом. Именно его находка положила начало нашей коллекции.
+                </div>
+            </div>
+        </div>
+        <div class="team-card2">
+            <img class="team-card-img2" src="../assets/images/team2.webp" alt="">
+            <div class="team-fullinfo2">
+                <div class="team-name-post2">
+                    <div class="team-name2">Глеб Смирнов</div>
+                    <div class="team-post2">Куратор экспозиций и историк</div>
+                </div>
+                <div class="team-info2">
+                    Отвечает за научный подход и увлекательное повествование. Превращает разрозненные пластинки в тематические выставки с собственной историей.
+                </div>
+            </div>
+        </div>
+        <div class="team-card3">
+            <img class="team-card-img3" src="../assets/images/team3.webp" alt="">
+            <div class="team-fullinfo3">
+                <div class="team-name-post3">
+                    <div class="team-name3">Глеб Смирнов</div>
+                    <div class="team-post3">Мастер по реставрации и звуку</div>
+                </div>
+                <div class="team-info3">
+                    Наш «доктор» для винила. Бережно возвращает к жизни старые и повреждённые пластинки, а также следит за тем, чтобы звук на наших прослушиваниях был безупречным.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="principles">
+    <div class="principles-title">Наши принципы</div>
+    <div class="principles-txt">
+        Аутентичность превыше всего. Мы не исправляем опечатки и не маскируем следы времени, если они не угрожают целостности пластинки. Каждая царапина — это часть её биографии. <br><br>
+        
+        Доступность. Мы стремимся сделать мир редкого винила открытым для всех. Наши экскурсии и мероприятия понятны как опытным коллекционерам, так и тем, кто только начинает свой путь. <br><br>
+        
+        Образовательный подход. Для нас важно не просто показать экспонат, но и рассказать его историю: почему он редкий, как был создан, в чём его культурная ценность. <br><br>
+        
+        Сообщество. Мы верим в силу сообщества и открыты к сотрудничеству. Если у вас есть уникальная пластинка и вы хотите поделиться её историей — мы всегда рады вас услышать.
+    </div>
+</div>
+    <div class="gallery">
+    <div class="gallery-title">Фотографии</div>
+    <div class="gallery-carousel">
+        <button class="carousel-btn carousel-btn-prev" aria-label="">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        
+        <div class="gallery-slides">
+            <div class="slide active">
+                <img class="gallery-img" src="../assets/images/gallery1.webp" alt="">
+            </div>
+            <div class="slide">
+                <img class="gallery-img" src="../assets/images/gallery2.webp" alt="">
+            </div>
+            <div class="slide">
+                <img class="gallery-img" src="../assets/images/gallery3.webp" alt="">
+            </div>
+        </div>
+        
+        <button class="carousel-btn carousel-btn-next" aria-label="">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+    </div>
+    
+    <div class="carousel-dots">
+        <button class="dot active" aria-label=""></button>
+        <button class="dot" aria-label=""></button>
+        <button class="dot" aria-label=""></button>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    const prevBtn = document.querySelector('.carousel-btn-prev');
+    const nextBtn = document.querySelector('.carousel-btn-next');
+    let currentSlide = 0;
+
+    function showSlide(n) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+        
+        if (n >= slides.length) currentSlide = 0;
+        if (n < 0) currentSlide = slides.length - 1;
+        
+        slides[currentSlide].classList.add('active');
+        dots[currentSlide].classList.add('active');
+    }
+
+    function nextSlide() {
+        currentSlide++;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide--;
+        showSlide(currentSlide);
+    }
+
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
+
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            currentSlide = index;
+            showSlide(currentSlide);
+        });
+    });
+
+    SetInterval(nextSlide, 8000);
+});
+</script>
+    <footer>
+    <div class="footer-nav">
+        
+        <div class="footer-navigation">
+            <div class="footer-navigation-name">Навигация</div>
+            <a class="footer-a1" href="index.html">Главная</a>
+            <a class="footer-a2" href="excursions.html">Экскурсии</a>
+            <a class="footer-a3" href="about.html">О нас</a>
+            <a class="footer-a4" href="contacts.html">Контакты</a>
+        </div>
+        <div class="footer-contacts">
+            <div class="footer-contacts-name">Контакты</div>
+            <div class="footer-contact1">
+                <img class="house-icon" src="../assets/images/house.webp" alt="">
+                <div class="contact1-txt">Адрес: г. Москва, ул. Кузнецова, 3А</div>
+            </div>
+            <div class="footer-contact2">
+                <img class="phone-icon" src="../assets/images/phone-icon.webp" alt="">
+                <div class="contact2-txt">Телефон: +7 (900) 123-45-67</div>
+            </div>
+            <div class="footer-contact3">
+                <img class="mail-icon" src="../assets/images/mail.webp" alt="">
+                <div class="contact3-txt">Почта: vinylarium.museum@yandex.ru</div>
+            </div>
+            <div class="footer-contact4">
+                <img class="clock-icon" src="../assets/images/clock.webp" alt="">
+                <div class="contact4-txt">График работы: пн-сб с 10:00 до 20:00</div>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <div class="footer-social-name">Наши соцсети</div>
+            <div class="footer-inst">
+                <img class="inst" src="../assets/images/inst.webp" alt="">
+                <div class="inst-txt">vinylarium.museum</div>
+            </div>
+            <div class="footer-tg">
+                <img class="tg" src="../assets/images/tg.webp" alt="">
+                <div class="tg-txt">vinylarium_channel</div>
+            </div>
+            <div class="footer-vk">
+                <img class="vk" src="../assets/images/vk.webp" alt="">
+                <div class="vk-txt">vinylarum_club</div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-rights">© Винилариум, 2025. Все права защищены.</div>
+</footer>
+    
+</body>
+</html>

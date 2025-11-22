@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+    <img class="logo" src="../assets/images/logo.webp" alt="">
+    <div class="navigation">
+        <a class="a1" href="index.html">Главная</a>
+        <a class="a2" href="excursions.html">Экскурсии</a>
+        <a class="a3" href="about.html">О нас</a>
+        <a class="a4" href="contacts.html">Контакты</a>
+    </div>
+    
+    <div class="header-controls">
+        <button class="theme">
+            <img class="theme-icon" src="../assets/images/theme.webp" alt="">
+        </button>
+        
+        <button class="burger-menu" aria-label="Открыть меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+
+    <div class="mobile-modal" id="mobileModal">
+        <div class="mobile-modal-content">
+            <button class="close-modal" aria-label="Закрыть меню">&times;</button>
+
+            <nav class="mobile-nav">
+                <a href="index.html">Главная</a>
+                <a href="excursions.html">Экскурсии</a>
+                <a href="about.html">О нас</a>
+                <a href="contacts.html">Контакты</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<script>
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const burger = document.querySelector('.burger-menu');
+    const modal = document.getElementById('mobileModal');
+    const closeBtn = document.querySelector('.close-modal');
+    const links = document.querySelectorAll('.mobile-nav a');
+
+    burger.addEventListener('click', () => {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+
+    closeBtn.addEventListener('click', () => {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+});
+const themeBtn = document.querySelector('.theme');
+
+themeBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-theme');
+
+    if (document.body.classList.contains('dark-theme')) {
+        localStorage.setItem('theme', 'dark');
+    } else {
+        localStorage.setItem('theme', 'light');
+    }
+});
+
+if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-theme');
+}
+
+</script>
+    <div class="contacts-nav">
+    <a class="contacts-nav-a1" href="index.html">Главная</a>
+    <img src="../assets/images/arrow.webp" alt="">
+    <div class="contacts-nav-a2">Контакты</div>
+</div>
+    <div class="contacts-info">
+    <div class="contacts-info-title">Мы всегда на связи. Напишите нам или посетите музей лично.</div>
+    <div class="contacts-info-block">
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2259.9706329645437!2d37.586155399999996!3d55.498037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414aaecc738ebe51%3A0x4a72b56347edd592!2z0YPQuy4g0JrRg9C30L3QtdGG0L7QstCwLCAzLCDQnNC-0YHQutCy0LAsIDExNzE0OA!5e0!3m2!1sru!2sru!4v1763750631925!5m2!1sru!2sru" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="contacts">
+            <div class="contact1">
+                <img class="contacts-house-icon" src="../assets/images/house2.webp" alt="">
+                <div class="contacts1-txt">Адрес: г. Москва, ул. Кузнецова, 3А</div>
+            </div>
+            <div class="contact2">
+                <img class="contacts-phone-icon" src="../assets/images/phone2.webp" alt="">
+                <div class="contacts2-txt">Телефон: +7 (900) 123-45-67</div>
+            </div>
+            <div class="contact3">
+                <img class="contacts-mail-icon" src="../assets/images/mail2.webp" alt="">
+                <div class="contacts3-txt">Почта: vinylarium.museum@yandex.ru</div>
+            </div>
+            <div class="contact4">
+                <img class="contacts-clock-icon" src="../assets/images/clock2.webp" alt="">
+                <div class="contacts4-txt">График работы: пн-сб с 10:00 до 20:00</div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="contacts-form">
+    <div class="contacts-form-title">Есть вопрос или предложение? Напишите нам.</div>
+    <form class="contacts-form-forms" action="">
+        <input class="form1" type="text" placeholder="ФИО">
+        <input class="form2" type="email" placeholder="Email">
+        <textarea class="form3" name="" id="" placeholder="Ваш текст"></textarea>
+        <input class="form-btn" type="reset" value="Отправить">
+    </form>
+</div>
+    <footer>
+    <div class="footer-nav">
+        
+        <div class="footer-navigation">
+            <div class="footer-navigation-name">Навигация</div>
+            <a class="footer-a1" href="index.html">Главная</a>
+            <a class="footer-a2" href="excursions.html">Экскурсии</a>
+            <a class="footer-a3" href="about.html">О нас</a>
+            <a class="footer-a4" href="contacts.html">Контакты</a>
+        </div>
+        <div class="footer-contacts">
+            <div class="footer-contacts-name">Контакты</div>
+            <div class="footer-contact1">
+                <img class="house-icon" src="../assets/images/house.webp" alt="">
+                <div class="contact1-txt">Адрес: г. Москва, ул. Кузнецова, 3А</div>
+            </div>
+            <div class="footer-contact2">
+                <img class="phone-icon" src="../assets/images/phone-icon.webp" alt="">
+                <div class="contact2-txt">Телефон: +7 (900) 123-45-67</div>
+            </div>
+            <div class="footer-contact3">
+                <img class="mail-icon" src="../assets/images/mail.webp" alt="">
+                <div class="contact3-txt">Почта: vinylarium.museum@yandex.ru</div>
+            </div>
+            <div class="footer-contact4">
+                <img class="clock-icon" src="../assets/images/clock.webp" alt="">
+                <div class="contact4-txt">График работы: пн-сб с 10:00 до 20:00</div>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <div class="footer-social-name">Наши соцсети</div>
+            <div class="footer-inst">
+                <img class="inst" src="../assets/images/inst.webp" alt="">
+                <div class="inst-txt">vinylarium.museum</div>
+            </div>
+            <div class="footer-tg">
+                <img class="tg" src="../assets/images/tg.webp" alt="">
+                <div class="tg-txt">vinylarium_channel</div>
+            </div>
+            <div class="footer-vk">
+                <img class="vk" src="../assets/images/vk.webp" alt="">
+                <div class="vk-txt">vinylarum_club</div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-rights">© Винилариум, 2025. Все права защищены.</div>
+</footer>
+    
+    
+</body>
+</html>
